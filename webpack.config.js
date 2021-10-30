@@ -13,6 +13,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({ template: './src/index.html' })
   ],
+  devServer: {
+    open: true,
+    port: 3000,
+    overlay: true, // abrir overlay con errores, pero se puede sacar
+    compress: true,
+  },
   module: {
     rules: [
       {
