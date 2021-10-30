@@ -14,7 +14,7 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, 'build'),
       clean: true
     },
-    devtool: 'inline-source-map', // 'source-map' el mejor pero el más costoso
+    devtool: 'source-map',
     plugins: [
       new HtmlWebpackPlugin({ template: './src/index.html' })
     ],
