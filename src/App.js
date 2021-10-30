@@ -1,3 +1,3 @@
-export default function App () {
-  return <h1>Hola Webpack!</h1>
-}
+const App = () => <h1>Hola Webpack!</h1>
+
+export default App
