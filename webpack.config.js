@@ -9,6 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     clean: true
   },
+  devtool: 'inline-source-map', // 'source-map' el mejor pero el más costoso
   plugins: [
     new HtmlWebpackPlugin({ template: './src/index.html' })
   ],
