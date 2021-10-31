@@ -2,14 +2,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
 module.exports = (env, argv) => {
-  const {mode} = argv
+  const { mode } = argv
   const isProduction = mode === 'production'
-  
+
   return {
     // entry: './src/index.js', esto es así por default
-     output: {
-      filename: isProduction 
-        ? '[name].[contenthash].js' 
+    output: {
+      filename: isProduction
+        ? '[name].[contenthash].js'
         : 'main.js',
       path: path.resolve(__dirname, 'build'),
       clean: true
@@ -22,7 +22,7 @@ module.exports = (env, argv) => {
       open: true,
       port: 3000,
       overlay: true, // abrir overlay con errores, pero se puede sacar
-      compress: true,
+      compress: true
     },
     module: {
       rules: [
@@ -46,14 +46,13 @@ module.exports = (env, argv) => {
         },
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
-          type: 'asset/resource',
+          type: 'asset/resource'
         },
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/i,
-          type: 'asset/resource',
+          type: 'asset/resource'
         }
       ]
     }
   }
-
 }
